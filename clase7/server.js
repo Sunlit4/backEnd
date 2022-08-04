@@ -69,7 +69,6 @@ app.post('/api/mensajes', (req, res) =>{
 })
 
 // PUT sirve para actualizar
-
 app.put('/api/mensajes/:id', (req, res) =>{
     //console.log(req.body)
     const {nombre} = req.body
@@ -83,7 +82,6 @@ app.put('/api/mensajes/:id', (req, res) =>{
 })
 
 // DELETE: necesito el id 
-
 app.delete('/api/mensajes/:id', (req, res) =>{
     const {id} = req.params
 
