@@ -50,7 +50,7 @@ routerProductos.delete('/:id', async (req, res) => {
     const wasDeleted = await contenedor.deleteById(id);
     wasDeleted 
         ? res.status(200).send(`El producto de ID: ${id} fue borrado`)
-        : res.status(404).send(`El producto no fue borrado porque no se encontró el ID: ${id}`);
+        : res.status(404).send(`El producto no fue borrado porque no se encontró el ID: ${id}`)
 })
 
 //////////////////////////////////////////////////////////////////////////

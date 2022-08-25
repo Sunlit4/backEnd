@@ -7,14 +7,14 @@
 #     "thumbnail": "someUrl.com"
 # }
 
-# PUT http://localhost:4000/api/productos/2 HTTP/1.1
-# content-type: application/json
-
-# {
-#     "title": "Cuaderno A4",
-#     "price": "100",
-#     "thumbnail": "someUrl"
-# }
+ PUT http://localhost:4000/api/productos/2 HTTP/1.1
+ 
+ content-type: application/json
+{
+    "title": "Cuaderno A4",
+    "price": "100",
+    "thumbnail": "someUrl"
+ }
 
 # DELETE  http://localhost:4000/api/productos/4 HTTP/1.1
 # content-type: application/json
