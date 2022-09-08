@@ -1,0 +1,152 @@
+<h2>Agregar Productos</h2>
+<div class="row g-3">
+    <form class="row g-3" action="/productos" method="POST">
+        <div class="col-sm-3">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="basic-addon1">Título</span>
+                <input id="input-title" type="text" name="title" required class="form-control" placeholder="Título del producto" aria-label="Título" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="basic-addon2">Precio</span>
+                <input id="input-price" type="text" name="price" required class="form-control" placeholder="Precio unitario" aria-label="Precio" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+            <div class="d-grid gap-2">
+                <button id="btn-submit" class="btn btn-primary btn-sm" type="submit">Agregar a la lista</button>
+            </div>
+        </div>
+    </form>
+     <hr>
+    <h2>Chatea con otros</h2>
+    <div id="messages"></div>
+    <form 
+        class="form-inline"
+        onsubmit="return addMessage(this)"
+        autocomplete="off"
+    >
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            class="form-control my-2 mr-2"
+            placeholder="Ingresa tu email"
+            required
+        />
+        <label for="message">Mensaje</label>
+        <input
+            type="text"
+            id="message"
+            class="form-control my-2 mr-2"
+            placeholder="Cuéntanos algo..."
+            required
+        />
+        <input class="btn btn-primary my-2" type="submit" value="Enviar" />
+    </form>
+
+    <span>Historial de mensajes</span>
+    <div id="historial-mensajes">
+        <!--Mensajes-->
+    </div>
+    <hr>
+    <div id="products">
+    <h3>Lista de productos</h3>
+    <div class="table-responsive">
+        <table class="table table-dark" id="tableOfProducts">
+            <thead>
+                <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody id="tbproducts"></tbody>
+        </table>
+    </div>
+
+    <script>
+        const socket = io();
+        socket.on("products", (data) => {
+            render(data);
+        });
+  
+        socket.on("messages", (data) => {
+            renderMessages(data);
+        });
+  
+        function render(data){
+            let html = data
+            .map((elem, index) => {
+                return `<tr>
+                <td>${elem.title}</td>
+                <td>${elem.price}</td>
+                </tr>`;
+            })
+        .join(" ");
+        document.getElementById("tbproducts").innerHTML = html;
+        } 
+  
+        function renderMessages(data) {
+            let html = data
+            .map((elem, index) => {
+            return `<div>
+            <span style="color: blue; font-weight: bold;">${elem.email}</span>
+            <span style="color: brown;">[${elem.date}]:</span>
+            <span style="color: green; font-style: italic;">${elem.message}</span></div>`;
+        })
+        .join(" ");
+        document.getElementById('messages').innerHTML = html;
+        }
+  
+        function addProduct(e) {
+            let producto = {
+            title: document.getElementById('title').value,
+            price: document.getElementById('price').value,
+        };
+            socket.emit('new-product', producto);
+            document.getElementById('title').value = "";
+            document.getElementById('price').value = "";
+            return false;
+        } 
+  
+        function addMessage(e) {
+        let message = {
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        date: formatDate(),
+        };
+        socket.emit('new-message', message); // new-message es el nombre del evento (recordatorio)
+  
+        document.getElementById("message").value = "";
+        document.getElementById("message").focus();
+  
+        return false;
+        }
+
+        socket.on('mensajesActualizada', (data)=>{
+            console.log(data);
+            $('#historial-mensajes').empty();
+            data.forEach((message)=>{
+                $('#historial-mensajes').append(
+                `
+                <small style="display:block"> - <em style="color:#9f9f9f">[${message.date}]</em> <strong style="color:green">${message.email}</strong>: ${message.message} </small>
+                `
+                )
+            })
+        })
+  
+        const formatDate = () => {
+            let date = new Date();
+            let formatted_date = `${date.getDate()}/${("0" + (date.getMonth() + 1)).slice(
+            -2
+            )}/${date.getFullYear()} ${date.getHours()}:${
+            date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()
+            }:${date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds()}`;
+            return formatted_date;
+        };
+
+    </script>
+</div>
