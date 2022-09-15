@@ -125,18 +125,6 @@
   
         return false;
         }
-
-        socket.on('mensajesActualizada', (data)=>{
-            console.log(data);
-            $('#historial-mensajes').empty();
-            data.forEach((message)=>{
-                $('#historial-mensajes').append(
-                `
-                <small style="display:block"> - <em style="color:#9f9f9f">[${message.date}]</em> <strong style="color:green">${message.email}</strong>: ${message.message} </small>
-                `
-                )
-            })
-        })
   
         const formatDate = () => {
             let date = new Date();
@@ -147,6 +135,5 @@
             }:${date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds()}`;
             return formatted_date;
         };
-
     </script>
 </div>
