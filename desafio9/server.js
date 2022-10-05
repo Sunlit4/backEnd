@@ -63,8 +63,8 @@ const io = new Server(server);
 io.on('connection', async (socket) => {
     console.log('User connected')
 
-    const arrayProduct = await products.getAll().then((resolve) => resolve);
-    const messages = await chat.getMessages().then((res) => res);
+    const arrayProduct = await products.getAll();
+    const messages = await chat.getMessages();
 
     const normalizedMessages = normalizar(messages);
     print(normalizedMessages);

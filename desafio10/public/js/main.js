@@ -1,17 +1,15 @@
-
-const socket = io()
-
-const author = new normalizr.schema.Entity('author'); 
+const author = new normalizr.schema.Entity('author')
 const text = new normalizr.schema.Entity('text', {
     author: author
-})
-
-const denormalizar = (obj)=>{
-    return normalizr.denormalize(obj.result, text, obj.entities)
+}); 
+const denormalizar = (obj) =>{
+    return normalizr.denormalizar(obj.result, text, obj.entities)
 }
 
-socket.on("products", (data)=>{
-    render(data)
+let socket = io.connect(); 
+
+socket.on('productos', (data)=>{
+    render(data);
 })
 
 socket.on('messages', (data)=>{
@@ -20,30 +18,31 @@ socket.on('messages', (data)=>{
 
 function render(data){
     let html = data
-      .map((elem, index) => {
-        return `<tr>
-    <td>${elem.title}</td>
-    <td>${elem.price}</td>
-    <td>${elem.thumbnail}</td>
-    </tr>`
-    })
-    .join("")
-    document.getElementById("tbproducts").innerHTML = html;
+        .map((elem, index)=>{
+            return `<tr>
+        <td>${elem.title}</td>
+        <td>${elem.price}</td>
+        <td><img src="${elem.thumbnail}" alt="Imagen del producto"></td>
+        </tr>`;
+        })
+        .join('');
+        document.getElementById('tbproducts').innerHTML = html;
 }
 
-function renderMessages(data) {
+function renderMessages(data){
     const denormalizedMessages = denormalizar(data);
     let html = denormalizedMessages.messages
-      .map((elem, index) => {
-        return `<div>
+        .map((elem, index) => {
+            return `<div>
         <span style="color: blue; font-weight: bold;">${elem.author.nombre}</span>
         <span style="color: blue; font-weight: bold;">${elem.author.apellido}</span>
         <span style="color: blue; font-weight: bold;">(${elem.author.id}),</span>
         <span style="color: blue; font-weight: bold;">(${elem.author.alias})</span>
+        <span style="color: blue; font-weight: bold;"><img src="${elem.author.avatar}" alt="Avatar del usuario" style="height: 50px;"></span>
         <span style="color: brown;">[${elem.date}]:</span>
         <span style="color: green; font-style: italic;">${elem.text}</span></div>`;
-      })
-      .join(" ");
+    })
+    .join(''); 
     document.getElementById("messages").innerHTML = html;
 }
 
@@ -68,17 +67,15 @@ function addMessage(e) {
         apellido: document.getElementById("apellido").value,
         edad: document.getElementById("edad").value,
         alias: document.getElementById("alias").value,
-        avatar: document.getElementById("avatar").value
       },
       text: document.getElementById("message").value,
       date: formatDate()
     };
-    socket.emit("new-message", message); // new-message es el nombre del evento (recordatorio)
-  
+    socket.emit("new-message", message);
     document.getElementById("message").value = "";
     document.getElementById("message").focus();
-  
-    return false;
+
+    return false; 
 }
 
 const formatDate = () => {

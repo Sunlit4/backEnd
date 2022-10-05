@@ -1,5 +1,5 @@
 const fs = require ('fs');
-const pathToChat = __dirname+'/../json/chat.json';
+const pathToChat = __dirname+'../../chat.json';
 
 class Chat{
     async getMessages(){
