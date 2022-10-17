@@ -14,9 +14,9 @@ const chat = new Contenedor("chat.json");
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
-app.set('views', './views');
+app.set('views', __dirname + '/views');
 app.set('view engine', 'hbs');
 
 app.engine('hbs', engine({
