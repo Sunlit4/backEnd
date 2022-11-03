@@ -1,0 +1,54 @@
+
+
+instalar compression = npm i compression
+
+- Dejo correr el servidor, sin compression, y la respuesta es la siguiente (Uso Rest): 
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+*Content-Length: 11*
+ETag: W/"b-e1AsOh9IyGCa4hLN+2Od7jlnP14"
+Date: Thu, 03 Nov 2022 10:46:41 GMT
+Connection: close
+
+Hello world
+
+- Ahora con compression: 
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+ETag: W/"186a0-1wh39WWNmwFK9/VaqU45R5PCvRg"
+Vary: Accept-Encoding
+*Content-Encoding: gzip*
+Date: Thu, 03 Nov 2022 10:54:42 GMT
+Connection: close
+Transfer-Encoding: chunked
+
+Al utulizar compression gzip: comprime la respuesta 
+
+*Ejercicio 1*
+
+Respuesta '/saludo': 
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 12000
+ETag: W/"2ee0-gX3KpHc93AJqK6o8IBJOmbkEsZc"
+Date: Thu, 03 Nov 2022 11:24:41 GMT
+Connection: close
+TAMAÑO 120k
+
+Respuesta '/saludozip': 
+
+tamaño 180B 
+
+------------------ SEGUNDA PARTE ----------------------------------------------------------
+LOGGER: npm i log4js
+El archivo logger.js esta la configuración. 
+1- Exporto el NODE_ENV para que este en produccion y no imprima por consola. El comando es: 
+export NODE_ENV='production?
+2- Inicio el servidor con el comando: 
+node app.js
+
+WISTON: npm i wiston 
+PINO: npm i pino 

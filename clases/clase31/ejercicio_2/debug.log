@@ -1,0 +1,5 @@
+[2022-11-03T14:14:39.688] [INFO] prod - Server en el 8080
+[2022-11-03T14:15:02.124] [INFO] prod - Parametros correctos: 1 3
+[2022-11-03T14:16:03.587] [WARN] prod - Ruta GET /suma no implementada
+[2022-11-03T14:17:02.767] [WARN] prod - Ruta GET /localhost:8080/sumar no implementada
+[2022-11-03T14:17:55.566] [ERROR] prod - Parametros invalidos
