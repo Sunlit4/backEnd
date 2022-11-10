@@ -1,0 +1,22 @@
+<h2>Hi! You're on the homepage.</h2>
+    {{#if status}}
+        <h3>You're logged in, you rock 😎</h3>
+        <div class="user__content">
+            <ul class="user__content--list">
+                <h2>Bienvenido {{user.username}}</h2>
+                <li>Email: {{user.email}}</li>
+                <li>Dirección: {{user.address}}</li>
+                <li>Edad: {{user.age}}</li>
+                <li>Telefono: {{user.phone}}</li>
+            </ul>
+        </div>
+
+        <div class="embed-responsive embed-responsive-16by9">
+             <iframe width="620" height="415"
+                src="https://www.youtube.com/embed/vu_eq9IPtCg?autoplay=1&mute=1">
+            </iframe> 
+        </div>
+    
+    {{else}}
+       <h4>Oops! Looks like you're not logged in 😲</h4>
+    {{/if}}

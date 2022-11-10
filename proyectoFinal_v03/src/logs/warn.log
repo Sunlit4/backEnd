@@ -1,0 +1,49 @@
+{"level":"error","message":"The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"error","message":"The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"error","message":"The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"error","message":"The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"error","message":"The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string."}
+{"level":"error","message":"10/11/2022 02:21:46 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:07:23 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:28:45 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:28:47 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:28:54 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:29:03 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:29:05 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:29:11 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 12:29:14 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 13:02:55 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 13:07:20 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 13:09:23 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 13:11:59 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 13:12:14 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 13:14:10 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 13:59:35 - URL:  - Method: POST - Status 404"}
+{"level":"error","message":"10/11/2022 14:07:26 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 14:07:50 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 14:34:51 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 14:35:40 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 14:54:18 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:01:38 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:23:27 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:24:15 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:25:55 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:26:02 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:26:02 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:26:46 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:26:46 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:27:05 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:27:06 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:30:56 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:31:17 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:32:31 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:32:58 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:33:35 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:35:22 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:36:52 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:37:31 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:40:05 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 15:40:37 - URL:  - Method: GET - Status 404"}
+{"level":"error","message":"10/11/2022 17:02:44 - URL: /register - Method: POST - Status: 409"}
+{"level":"error","message":"10/11/2022 17:02:48 - URL: /register - Method: POST - Status: 409"}
+{"level":"error","message":"10/11/2022 17:03:18 - URL: /register - Method: POST - Status: 409"}
