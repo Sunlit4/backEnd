@@ -4,4 +4,4 @@ GET http://localhost:8080/api/randoms?cant=999999999999999999999999999999 HTTP/1
 GET http://localhost:8080/api/info HTTP/1.1
 
 ###
-GET http://localhost:8080/info HTTP/1.1
+GET http://localhost:8080/infolog HTTP/1.1

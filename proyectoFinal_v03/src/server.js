@@ -45,7 +45,7 @@ const enableExpress = () =>{
     }))
 
     //Server
-    const PORT = process.env.PORT || 8080; 
+    const PORT = process.env.PORT 
     mongoose
         .connect(process.env.MONGO_URI, {
             useNewUrlParser:true, 
