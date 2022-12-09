@@ -9,6 +9,8 @@ const session = require('express-session')
 const mongoStore = require('connect-mongo')
 require('dotenv').config()
 const compression = require('compression')
+const cors = require('cors')
+app.use(cors())
 
 
 app.set("view engine", "pug")
@@ -175,9 +177,9 @@ app.use((req, res, next) => {
     next()
 })
 
-const productsRouter = require('../routes/productos.js')
-const testRouter = require('../routes/test.js')
-const randomsRouter = require('../routes/randoms.js')
+const productsRouter = require('../src/routes/productos.js')
+const testRouter = require('../src/routes/test.js')
+const randomsRouter = require('../src/routes/randoms.js')
 
 app.use("/api/", checkAuth, productsRouter)
 app.use("/api/", testRouter)

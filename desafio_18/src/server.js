@@ -1,5 +1,5 @@
 const { httpServer } = require('./app.js')
-const { logger } = require('./logs/logger.js')
+const { logger } = require('../logs/logger.js')
 
 
 const yargs = require('yargs/yargs')(process.argv.slice(2))

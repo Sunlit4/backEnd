@@ -3913,3 +3913,6 @@
 {"level":"warn","message":"Ruta /infolog con método GET no implementada"}
 {"level":"warn","message":"Ruta /infolog con método GET no implementada"}
 {"level":"warn","message":"Ruta /infolog con método GET no implementada"}
+{"level":"warn","message":"Ruta / con método GET no implementada"}
+{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
+{"level":"warn","message":"Ruta / con método GET no implementada"}

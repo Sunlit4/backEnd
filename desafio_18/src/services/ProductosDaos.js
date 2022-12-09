@@ -2,7 +2,7 @@ const Contenedor = require('../DAO/contenedor.js')
 
 class ProductosDaos extends Contenedor {
     constructor() {
-        super('../DB/productos.model.js')
+        super('../models/productos.model.js')
     }
 }
 

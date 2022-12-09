@@ -12881,3 +12881,39 @@
 {"level":"warn","message":"Ruta /infolog con método GET no implementada"}
 {"level":"info","message":"[3/10/2022 20:36:39] GET /infolog"}
 {"level":"warn","message":"Ruta /infolog con método GET no implementada"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[9/11/2022 9:26:19] GET /api/productos/"}
+{"level":"info","message":"[9/11/2022 9:26:20] POST /api/productos/"}
+{"level":"info","message":"[9/11/2022 9:26:20] DELETE /api/productos/638e852c56135267a837e2c4"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[9/11/2022 9:28:13] GET /"}
+{"level":"warn","message":"Ruta / con método GET no implementada"}
+{"level":"info","message":"[9/11/2022 9:28:14] GET /favicon.ico"}
+{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[9/11/2022 10:14:25] GET /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:14:26] POST /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:14:26] DELETE /api/productos/638e852c56135267a837e2c4"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[9/11/2022 10:32:10] GET /api/productos"}
+{"level":"info","message":"[9/11/2022 10:33:44] GET /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:33:45] POST /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:33:45] DELETE /api/productos/638e852c56135267a837e2c4"}
+{"level":"info","message":"[9/11/2022 10:34:52] GET /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:34:53] POST /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:34:53] DELETE /api/productos/638e852c56135267a837e2c4"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[9/11/2022 10:38:3] GET /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:38:4] POST /api/productos/"}
+{"level":"info","message":"[9/11/2022 10:38:4] DELETE /api/productos/638e852c56135267a837e2c4"}
+{"level":"info","message":"[9/11/2022 10:40:17] GET /"}
+{"level":"warn","message":"Ruta / con método GET no implementada"}
+{"level":"info","message":"[9/11/2022 10:40:23] GET /api/productos"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[9/11/2022 11:6:27] GET /api/productos"}
